@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colour Picker</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="modal" id="clipboard-message" style="display: none;"></div>
+
+  <form class="colour-picker-form" id="colour-picker-form">
+    <div class="colour-preview" id="colour-preview"></div>
+
+    <div>
+      <label>H: <span id="number-hue">180</span></label>
+      <input type="range" name="range-hue" id="range-hue" min="0" max="360" value="180">
+    </div>
+
+    <div>
+      <label>S: <span id="number-saturation">50</span></label>
+      <input type="range" name="range-saturation" id="range-saturation" min="0" max="100" value="50">
+    </div>
+    
+    <div>
+      <label>L: <span id="number-lightness">50</span></label>
+      <input type="range" name="range-lightness" id="range-lightness" min="0" max="100" value="50">
+    </div>
+
+    <button type="submit" class="btn">Store Colour</button>
+  </form>
+
+  <div class="colours" id="previous-colours"></div>
+</body>
+</html>
