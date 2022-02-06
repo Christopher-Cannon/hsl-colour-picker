@@ -115,7 +115,10 @@ function App() {
             key={index} 
             className="colour-block" 
             style={{backgroundColor: `${colour.hsl}`}}
-            onClick={() => showAlert(true, colour.hsl)}
+            onClick={() => {
+              showAlert(true, colour.hsl);
+              navigator.clipboard.writeText(colour.hsl);
+            }}
           >
             <div style={{ color: `${colour.lightness < 50 ? "white" : "black"}` }}>{colour.hsl}</div>
           </div>
